@@ -1,31 +1,5 @@
-body {
-    background: rgb(22, 22, 22);
-    color: #ffffff;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-.heading {
-    text-align: center;
-}
-.titlePart {
-    text-align: center;
-    border-style: dotted;
-    border-radius: 20%;
-    border-color: blueviolet;
-}
+
 .inputOptions {
     display: flex;
     padding-top: 20px;
 }
-.sectionAlign {
-    text-align: center;
-}
-/* .button-center {
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-.submitButton {
-    text-align: center;
-    background-color: burlywood;d
-
-} */
