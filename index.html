@@ -5,40 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pass Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <main>
-
-        <h1 class="heading">Password Generator</h1>
-        <div class="titlePart">
-            <p class="GeneratedPass" id="GeneratedPass">Generated Pass Here</p>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <main class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-center">Password Generator</h1>
+        <div class="mb-6">
+            <p class="GeneratedPass bg-gray-700 p-4 rounded text-center" id="GeneratedPass">Generated Pass Here</p>
         </div>
-
-     <section class="sectionAlign" id="sectionAlign">
-            <div class="inputOptions">
-            <p class="align" id="align">Lower Case</p>
-            <input type="checkbox" name="LowerCase" class="CheckBox" id="CheckBox">
+        <section class="sectionAlign mb-6" id="sectionAlign">
+            <div class="inputOptions flex justify-between items-center mb-4">
+                <p class="align">Lower Case</p>
+                <input type="checkbox" name="LowerCase" class="CheckBox" id="CheckBox">
             </div>
-            <div class="inputOptions">
-                <p class="align" id="align">Higher Case</p>
+            <div class="inputOptions flex justify-between items-center mb-4">
+                <p class="align">Higher Case</p>
                 <input type="checkbox" name="HigherCase" class="CheckBox" id="CheckBox">
             </div>
-              <div class="inputOptions">
-                    <p class="align" id="align">Digits</p>
-                    <input type="checkbox" name="Digits" class="CheckBox" id="CheckBox">
-             </div>
-              <div class="inputOptions">
-                  <p class="align" id="align">Special Symbols</p>
-                   <input type="checkbox" name="Symbols" class="CheckBox" id="CheckBox">
-              </div>
-                        
-    </section>
-
-    <button type="submit" class="submitButton" id="submitButton"><p class="button-center">Generate Password</p></button>
-
+            <div class="inputOptions flex justify-between items-center mb-4">
+                <p class="align">Digits</p>
+                <input type="checkbox" name="Digits" class="CheckBox" id="CheckBox">
+            </div>
+            <div class="inputOptions flex justify-between items-center mb-4">
+                <p class="align">Special Symbols</p>
+                <input type="checkbox" name="Symbols" class="CheckBox" id="CheckBox">
+            </div>
+        </section>
+        <button type="submit" class="submitButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full" id="submitButton">Generate Password</button>
     </main>
-    
-
     <script src="script.js"></script>
 </body>
 </html>
