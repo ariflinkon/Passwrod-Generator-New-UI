@@ -25,23 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (symbolsCheckbox.checked) {
             availableChars += symbolChars;
         }
-if (availableChars === '') {
-    const popup = document.createElement('div');
-    popup.className = 'fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50';
-    popup.innerHTML = `
-        <div class="bg-white p-6 rounded shadow-lg">
-            <p class="text-red-500">Please select at least one option to generate a password.</p>
-            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" id="closePopup">Close</button>
-        </div>
-    `;
-    document.body.appendChild(popup);
+        if (availableChars === '') {
+            const popup = document.createElement('div');
+            popup.className = 'fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50';
+            popup.innerHTML = `
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <p class="text-red-500">Please select at least one option to generate a password.</p>
+                </div>
+            `;
+            document.body.appendChild(popup);
 
-    document.getElementById('closePopup').addEventListener('click', () => {
-        document.body.removeChild(popup);
-    });
+            setTimeout(() => {
+                document.body.removeChild(popup);
+            }, 3000); // Automatically remove after 3 seconds
 
-    return;
-}
+            return;
+        }
         let password = '';
         const passwordLength = 12; // You can change the length as needed
         for (let i = 0; i < passwordLength; i++) {
