@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('submitButton');
     const generatedPassElement = document.getElementById('GeneratedPass');
     const passwordHistoryList = document.getElementById('passwordHistoryList');
+    const clearHistoryButton = document.getElementById('clearHistoryButton'); // Add this line
 
     const lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
     const higherCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -59,4 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     generateButton.addEventListener('click', generatePassword);
+
+    // Add this function to clear the history
+    function clearHistory() {
+        passwordHistoryList.innerHTML = '';
+    }
+
+    // Add event listener to the clear history button
+    clearHistoryButton.addEventListener('click', clearHistory);
 });
