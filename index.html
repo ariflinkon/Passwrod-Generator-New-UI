@@ -30,9 +30,18 @@
                 <p class="align">Special Symbols</p>
                 <input type="checkbox" name="Symbols" class="CheckBox" id="CheckBox">
             </div>
-        </section>
         <button type="submit" class="submitButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full" id="submitButton">Generate Password</button>
+
+        <!-- History Section -->
+        <section class="history mt-6" id="passwordHistorySection">
+            <h2 class="text-2xl font-bold mb-4 text-center" id="passwordHistoryTitle">Password History</h2>
+            <div class="historyList bg-gray-700 p-4 rounded" id="passwordHistoryList">
+                <!-- Generated passwords will be appended here -->
+            </div>
+        </section>
     </main>
+
+
     <script src="script.js"></script>
 </body>
 </html>

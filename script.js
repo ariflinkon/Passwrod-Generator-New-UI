@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const symbolsCheckbox = document.querySelector('input[name="Symbols"]');
     const generateButton = document.getElementById('submitButton');
     const generatedPassElement = document.getElementById('GeneratedPass');
+    const passwordHistoryList = document.getElementById('passwordHistoryList');
 
     const lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
     const higherCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -49,6 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         generatedPassElement.textContent = password;
+
+        // Append the generated password to the history list
+        const passwordItem = document.createElement('p');
+        passwordItem.textContent = password;
+        passwordItem.className = 'bg-gray-600 p-2 rounded mt-2';
+        passwordHistoryList.appendChild(passwordItem);
     }
 
     generateButton.addEventListener('click', generatePassword);
