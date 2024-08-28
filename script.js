@@ -68,4 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listener to the clear history button
     clearHistoryButton.addEventListener('click', clearHistory);
+
+    // Add copy icon and feature
+    const copyIcon = document.createElement('span');
+    copyIcon.textContent = '📋';
+    copyIcon.style.cursor = 'pointer';
+    copyIcon.style.marginLeft = '10px';
+    generatedPassElement.parentNode.appendChild(copyIcon);
+
+    copyIcon.addEventListener('click', () => {
+        const password = generatedPassElement.textContent;
+        navigator.clipboard.writeText(password).then(() => {
+            alert('Password copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy password: ', err);
+        });
+    });
 });
