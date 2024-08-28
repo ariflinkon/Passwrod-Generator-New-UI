@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         generatedPassElement.textContent = password;
-
+        generatedPassElement.appendChild(copyIcon); // Ensure the copy icon is always appended
         // Append the generated password to the history list
         const passwordItem = document.createElement('p');
         passwordItem.textContent = password;
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     copyIcon.textContent = '📋';
     copyIcon.style.cursor = 'pointer';
     copyIcon.style.marginLeft = '10px';
-    generatedPassElement.parentNode.appendChild(copyIcon);
+    generatedPassElement.appendChild(copyIcon);
 
     copyIcon.addEventListener('click', () => {
         const password = generatedPassElement.textContent;
