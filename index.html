@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-    <main class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+<body class="bg-black text-green-500 flex items-center justify-center min-h-screen">
+    <main class="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 class="text-3xl font-bold mb-6 text-center">Password Generator</h1>
         <div class="mb-6">
-            <p class="GeneratedPass bg-gray-700 p-4 rounded text-center" id="GeneratedPass">Generated Pass Here</p>
+            <p class="GeneratedPass bg-gray-800 p-4 rounded text-center" id="GeneratedPass">Generated Pass Here</p>
         </div>
         <section class="sectionAlign mb-6" id="sectionAlign">
             <div class="inputOptions flex justify-between items-center mb-4">
@@ -30,17 +30,17 @@
                 <p class="align">Special Symbols</p>
                 <input type="checkbox" name="Symbols" class="CheckBox" id="CheckBox">
             </div>
-        <button type="submit" class="submitButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full" id="submitButton">Generate Password</button>
+        <button type="submit" class="submitButton bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded w-full" id="submitButton">Generate Password</button>
 
         <!-- History Section -->
         <section class="history mt-6" id="passwordHistorySection">
             <h2 class="text-2xl font-bold mb-4 text-center" id="passwordHistoryTitle">Password History</h2>
-            <div class="historyList bg-gray-700 p-4 rounded" id="passwordHistoryList">
+            <div class="historyList bg-gray-800 p-4 rounded" id="passwordHistoryList">
                 <!-- Generated passwords will be appended here -->
             </div>
         </section>
         
-          <button id="clearHistoryButton">Clear History</button>
+          <button id="clearHistoryButton" class="bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded w-full mt-4">Clear History</button>
 
     </main>
 
